@@ -1,3 +1,9 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
     font-family: Arial, sans-serif;
     display: flex;
@@ -13,10 +19,52 @@ body {
     background-color: #fff;
     padding: 20px;
     box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    width: 80%;
+    max-width: 1000px;
+}
+
+h1 {
+    margin-bottom: 30px; /* Add space below the heading */
+}
+
+#question-container {
+    margin-bottom: 20px; /* Add space below the question container */
+}
+
+#question {
+    margin-bottom: 10px; /* Add space below the question text */
+    font-size: 1.5em; /* Increase font size of the question */
+}
+
+#answer {
+    margin-bottom: 10px; /* Add space below the answer input field */
+    padding: 8px; /* Add some padding inside the input field */
+    width: 100%; /* Make the input field full-width of its container */
+    max-width: 300px; /* Limit the maximum width of the input field */
+}
+
+#submit-button {
+    padding: 10px 20px; /* Add padding inside the button */
+}
+
+#image-container {
+    display: flex;
+    justify-content: center; /* Horizontally center */
+    align-items: center; /* Vertically center */
+    width: 100%; /* Full width of the container */
+    height: auto; /* Adjust height based on content */
+    margin-top: 20px; /* Space above the image container */
 }
 
 #random-image {
-    margin-top: 20px;
-    max-width: 100%;
-    height: auto;
+    max-width: 30%; /* Adjust width as needed */
+    max-height: 30%; /* Adjust height as needed */
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    display: block; /* Ensure the image behaves as a block element */
+    margin: 0 auto; /* Center the image horizontally */
 }

@@ -4,16 +4,16 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quiz App</title>
-    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="style.css">
     <link rel="manifest" href="manifest.json">
 </head>
 <body>
     <div class="container">
-        <h1>Quiz App</h1>
+        <h1>AA photos generator</h1>
         <div id="question-container">
             <p id="question"></p>
             <input type="text" id="answer" placeholder="Your answer" onkeydown="handleKeyDown(event)">
-            <button onclick="checkAnswer()">Submit</button>
+            <button id="submit-button" onclick="checkAnswer()">Submit</button>
         </div>
         <div id="image-container" style="display: none;">
             <img id="random-image" src="" alt="Your photo">
@@ -23,14 +23,5 @@
         </div>
     </div>
     <script src="script.js"></script>
-    <script>
-        if ('serviceWorker' in navigator) {
-          navigator.serviceWorker.register('/service-worker.js').then(function(registration) {
-            console.log('ServiceWorker registration successful with scope: ', registration.scope);
-          }, function(error) {
-            console.log('ServiceWorker registration failed: ', error);
-          });
-        }
-    </script> 
 </body>
-</html>
+</html>       
