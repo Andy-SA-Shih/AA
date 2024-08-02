@@ -22,6 +22,22 @@
             <button id="next-question-button" onclick="nextQuestion()">Next Question</button>
         </div>
     </div>
-    <script src="script.js"></script>
+    <script>
+        async function loadScript() {
+            const token = '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';
+            const response = await fetch('https://api.github.com/repos/Andy-SA-Shih/AA_private/contents/script.js', {
+                headers: {
+                    Authorization: `token ${token}`
+                }
+            });
+            const data = await response.json();
+            const scriptContent = atob(data.content);
+            const scriptElement = document.createElement('script');
+            scriptElement.textContent = scriptContent;
+            document.body.appendChild(scriptElement);
+        }
+
+        loadScript();
+    </script>
 </body>
 </html>       
